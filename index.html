@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="src/components.js"></script>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script> 
+</head>
+<body>
+    <my-element></my-element>
+    <my-page></my-page>
+    <use-slot>
+        <p slot="two">Include me in slot "two".</p>
+    </use-slot>
+    <use-slot>
+      <p slot="one">Include me in slot "one".</p>
+      <p slot="nope">This one will not render at all.</p>
+      <p>No default slot, so this one won't render either.</p>
+    </use-slot>
+    <use-styles>
+    </use-styles>
+    <shadow-style>
+        <p>Slotted paragraph</p>
+        <span slot="hi">Slotted span inside a div</span>
+    </shadow-style>
+    <use-properties my-prop="my-prop" 
+    someprop="someprop"></use-properties>
+</body>
+</html>
